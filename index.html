@@ -44,41 +44,20 @@
     <form id="loginForm">
       <div class="mb-3">
         <label for="email" class="form-label">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+        <input type="email" class="form-control" id="loginEmail" placeholder="Digite seu e-mail" required>
       </div>
       <div class="mb-3">
         <label for="senha" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+        <input type="password" class="form-control" id="loginSenha" placeholder="Digite sua senha" required>
       </div>
-      <button type="submit" class="btn btn-primary w-100">Entrar</button>
+      <button type="submit" class="btn btn-primary w-100" onclick="acessar()">Entrar</button>
     </form>
     <div class="text-center mt-3">
       <button class="btn btn-link" onclick="cadastrar()">Não tem uma conta? Cadastre-se</button>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-      const email = document.getElementById("email").value;
-      const senha = document.getElementById("senha").value;
-
-      // Simples validação (exemplo)
-      if(email && senha){
-        alert("Login realizado com sucesso!");
-        // Aqui você poderia redirecionar ou fazer uma requisição
-      } else {
-        alert("Por favor, preencha todos os campos.");
-      }
-    });
-
-    function cadastrar() {
-      alert("Redirecionando para a página de cadastro...");
-      // Aqui você pode redirecionar com window.location.href = 'cadastro.html';
-    }
-  </script>
+<script src="main.js"></script>
 
 </body>
 </html>
